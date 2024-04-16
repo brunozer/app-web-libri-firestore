@@ -10,23 +10,43 @@
     <body>
         <h1>web app libri - firebase- firestore</h1>
         <div class="content">
-            <form id="add-book-form"></form>
+            <form id="add-book-form">
+                <input
+                    name="titulo"
+                    type="text"
+                    id="titulo"
+                    placeholder="digite o titulo"
+                />
+                <input
+                    name="autor"
+                    type="text"
+                    id="autor"
+                    placeholder="digite o autor"
+                />
+            </form>
         </div>
 
-        <ul id="book-list"></ul>
+        <ul class="book-list"></ul>
     </body>
-    <!-- IMPORT DO SDK DO FIREBASE -->
+
     <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
 
-    <!-- IMPORT DO SDK DO FIRESTORE -->
     <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
     <script>
-        //firebase config
+        const firebaseConfig = {
+            apiKey: 'AIzaSyC1LVGoLK23ggrbCDozpvFNzR8BLXfaj1Q',
+            authDomain: 'app-libre-bruno.firebaseapp.com',
+            projectId: 'app-libre-bruno',
+            storageBucket: 'app-libre-bruno.appspot.com',
+            messagingSenderId: '871623631314',
+            appId: '1:871623631314:web:ac2c9145220f9e79b9e80b',
+            measurementId: 'G-S65N69C8WP',
+        };
+
         firebase.initializeApp(firebaseConfig);
 
         const db = firebase.firestore();
-
         console.log(db);
     </script>
-    <script src="app.js"></script>
+    <script src="/app.js"></script>
 </html>
